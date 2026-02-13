@@ -3,6 +3,8 @@ import tokVinyl from './assets/tok_vinyl.png';
 import tokVinylCase from './assets/tok_vinyl_case_only.png';
 import instaVinyl from './assets/insta_vinyl.png';
 import instaVinylCase from './assets/insta_vinyl_case_only.png';
+import subStackVinyl from './assets/substack_vinyl.png';
+import subStackVinylCase from './assets/substack_vinyl_cover.png';
 
 const R2_DOMAIN = 'https://r2.eddwithoutthewar.com/';
 //=======================================================
@@ -248,23 +250,112 @@ export const RADIO_EP_TRACKLIST = [
   },
 ];
 
+// Crochet EXAMPLES
+export const CROCHET_SAMPLES = [
+    {
+        id: 1,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 2,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 3,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 4,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 5,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 6,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 7,
+        img: R2_DOMAIN + '404_img.JPG',
+        alt: 'A crochet'
+    },
+    {
+        id: 8,
+        img: R2_DOMAIN + '404_img.JPG',
+        alt: 'A crochet'
+    },
+    {
+        id: 9,
+        img: R2_DOMAIN + '404_img.JPG',
+        alt: 'A crochet'
+    },
+    {
+        id: 10,
+        img: R2_DOMAIN + '404_img.JPG',
+        alt: 'A crochet'
+    },
+    {
+        id: 11,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 12,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 13,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 14,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    },
+    {
+        id: 15,
+        img: R2_DOMAIN + '404_img.png',
+        alt: 'A crochet'
+    }
+]
+
+
+
 // The list of Social Vinyl
 export const VINYL_LIST = [
     {
-        id: 1,
-        name: 'Tik Tok', 
-        path: tokVinylCase,
-        altPath: tokVinyl,
-        descipt: 'Tik Tok Vinyl connecting to social media',
-        webref: 'https://www.tiktok.com/@edollarsigns'
-    }
-    ,{
-        id:2,
-        name: 'Instagram', 
-        path: instaVinylCase,
-        altPath: instaVinyl,
-        descipt: 'Instagram Vinyl connecting to social media',
-        webref: 'https://www.instagram.com/ededd_or_eddy'
+      id: 1,
+      name: 'Substack', 
+      path: subStackVinylCase,
+      altPath: subStackVinyl,
+      descipt: 'Substack Vinyl connecting to substack profile',
+      webref: 'https://substack.com/@eddwithoutthewar'
+    },
+    {
+      id: 2,
+      name: 'Tik Tok', 
+      path: tokVinylCase,
+      altPath: tokVinyl,
+      descipt: 'Tik Tok Vinyl connecting to social media',
+      webref: 'https://www.tiktok.com/@edollarsigns'
+    },
+    {
+      id:3,
+      name: 'Instagram', 
+      path: instaVinylCase,
+      altPath: instaVinyl,
+      descipt: 'Instagram Vinyl connecting to social media',
+      webref: 'https://www.instagram.com/ededd_or_eddy'
     }
 ]
 
