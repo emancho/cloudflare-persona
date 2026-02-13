@@ -8,7 +8,7 @@
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "npm run build && wrangler pages dev",
-		"deploy": "npm run build && wrangler pages deploy",
+		"deploy": "npm run build && wrangler pages deploy ./dist --project-name eddartistpage",
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
