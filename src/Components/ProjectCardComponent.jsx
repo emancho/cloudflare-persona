@@ -1,8 +1,8 @@
 //== React Libs
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 //== Material UI
-import { Card, Box, CardMedia, CardContent, Typography, CardActions, Button, Stack } from '@mui/material';
+import { Card, Box, CardMedia, CardContent, Typography, CardActions, Button, Stack, styled } from '@mui/material';
 
 /*
 Component Description:
@@ -17,21 +17,41 @@ function ProjectCardComponent({
     projTitle,
     projDesc,
     projAction,
-    projResponse 
+    projResponse,
+    buttonCap 
 }) {
     const navigate = useNavigate();
     const [showDetails, setShowDetails] = useState(false);
+    
+    // Handler Functions
+    const handlePopup = () => {
+        window.open(projResponse, '_blank', 'noopener,noreferrer');
+    };
 
+    // Project Button Actions - Redirect(directs to another page), Popup(), Other 
     const handleButtonClick = () => {
         if (projAction === 'REDIRECT') {
             navigate(projResponse);
-        } else {
+        }else if(projAction === 'POPUP'){
+            handlePopup();
+        }else {
             setShowDetails(!showDetails);
         }
     };
 
+    // Custom Settings Button Style
+    const ColorButton = styled(Button)(({ theme }) => ({
+        color: theme.palette.getContrastText('#C2E4EF'),
+        backgroundColor: '#C2E4EF',
+        '&:hover': {
+        backgroundColor: '#6EA6CD',
+        size: 'large',
+        onClick: handleButtonClick
+        },
+    }));
+
     const displayMessage = showDetails ? projResponse : projDesc;
-    const buttonLabel = projAction === 'REDIRECT' ? 'GO' : (showDetails ? 'BACK' : 'MORE');
+    const buttonLabel = projAction !== 'OTHER' ? buttonCap : (showDetails ? 'BACK' : 'MORE');
 
     return (
         <Card sx={{ minWidth: minWid }}>
@@ -70,9 +90,7 @@ function ProjectCardComponent({
                 </Stack>
             </CardContent>
             <CardActions>
-                <Button size="large" onClick={handleButtonClick}>
-                    {buttonLabel}
-                </Button>
+                <ColorButton variant="contained" onClick={handleButtonClick}>{buttonLabel}</ColorButton>
             </CardActions>
         </Card>
     );

@@ -19,32 +19,32 @@ const WebpageTemplate = ({bannerDisplay=false, mainContent}) => {
     
     // The Style for the Header
     const headerStyles = {
-        width: '100%',              // Ensures the header spans the full width of its container
-        padding: '20px',            // Adds 20px of padding inside the header to create space around its content
-        backgroundColor: '#3f51b5', // Sets the background color of the header to a dark blue (#3f51b5)
-        color: '#fff',              // Sets the text color inside the header to white (#fff) for contrast against the dark background
-        textAlign: 'center',        // Centers the text horizontally within the header
-        overflow: 'hidden',         // Ensure the text doesn't overflow out of the container
-        whiteSpace: 'nowrap'        // Prevent the text from wrapping
+        width: '100%',                 // Ensures the header spans the full width of its container
+        padding: '20px',               // Adds 20px of padding inside the header to create space around its content
+        backgroundColor: '#3f51b5',  // Sets the background color of the header to a dark blue (#3f51b5)
+        color: '#fff',               // Sets the text color inside the header to white (#fff) for contrast against the dark background
+        textAlign: 'center',           // Centers the text horizontally within the header
+        overflow: 'hidden',            // Ensure the text doesn't overflow out of the container
+        whiteSpace: 'nowrap'           // Prevent the text from wrapping
     };
     
     // The Style for the Footer
     const footerStyles = {
-        flex: '1',              // Ensures the footer spans the full width of its container
-        padding: '10px',            // Adds 10px of padding inside the footer to create space around its content
-        backgroundColor: '#3f51b5', // Sets the background color of the footer to a dark blue (#3f51b5)
-        color: '#fff',              // Sets the text color inside the footer to white (#fff) for contrast against the dark background
-        textAlign: 'center',        // Centers the text horizontally within the footer
-        marginTop: 'auto',          // Pushes the footer to the bottom of its container, ensuring it stays at the bottom of the page
+        flex: '1',                     // Ensures the footer spans the full width of its container
+        padding: '10px',               // Adds 10px of padding inside the footer to create space around its content
+        backgroundColor: '#3f51b5',  // Sets the background color of the footer to a dark blue (#3f51b5)
+        color: '#fff',               // Sets the text color inside the footer to white (#fff) for contrast against the dark background
+        textAlign: 'center',           // Centers the text horizontally within the footer
+        marginTop: 'auto',             // Pushes the footer to the bottom of its container, ensuring it stays at the bottom of the page
     };
     
     // The Style for the Main Content Area
     const mainContentStyles = {
         padding: '20px',               // Adds 20px of padding inside the content area to create space around its content
-        backgroundColor: '#c5d7cd',    // Sets the background color of the content area to a light shade of green (#c5d7cd)
+        backgroundColor: '#c5d7cd',  // Sets the background color of the content area to a light shade of green (#c5d7cd)
         borderRadius: '10px',          // Rounds the corners of the content area with a radius of 10px for a softer look
         width: {
-            xs: '90%',                // 100% width on extra-small screens (phones)
+            xs: '90%',                 // 100% width on extra-small screens (phones)
             sm: '70%',                 // 70% width on small screens
             md: '70%',                 // 70% width on medium and larger screens
         },

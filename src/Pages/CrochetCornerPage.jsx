@@ -4,9 +4,8 @@ import _ from 'lodash';
 import AnimatedText from '../Components/AnimatedText';
 import MainContentComponent from '../Components/MainContentComponent';
 import WebpageTemplate from "../Components/WebpageTemplate";
-import CrochetSection from '../Components/CrochetSection';
 import CommissionForm from '../Components/ComissionForm';
-
+import CrochetSelectScreen from '../Components/CrochetSelectScreen'
 
 // == Description:
 // The Crochet Page - This page is the page listing my crochet hat pieces and a contact form for a comissions. 
@@ -26,11 +25,8 @@ function CrochetPage() {
     <WebpageTemplate 
         mainContent={
         <MainContentComponent 
-            title={
-                <AnimatedText 
-                    title={'Crochet Corner'}/>
-                }
-            topSection={ <CrochetSection/>}
+            title={<AnimatedText title={'Crochet Corner'}/>}
+            topSection={ <CrochetSelectScreen/>}
             topStyle={""}
             bottomSection={<CommissionForm/>}  
             bottomStyle={""}

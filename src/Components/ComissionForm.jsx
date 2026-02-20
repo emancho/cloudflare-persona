@@ -8,12 +8,10 @@ import Select from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
-const hatTypes = [
-  'Fedora',
-  'Beanie',
-  'Baseball Cap',
-  'Top Hat',
-  'Bowler',
+const crochetTypes = [
+  'Cat Ear Hat',
+  'Shiesty',
+  'Other'
 ];
 
 function ComissionForm() {
@@ -75,7 +73,7 @@ function ComissionForm() {
             label="Hat Type"
             onChange={(e) => setHatType(e.target.value)}
           >
-            {hatTypes.map((type) => (
+            {crochetTypes.map((type) => (
               <MenuItem key={type} value={type}>
                 {type}
               </MenuItem>

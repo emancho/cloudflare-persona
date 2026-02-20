@@ -35,6 +35,7 @@ const GridListComponent = ({ projectList }) => {
             projDesc={project.projDesc}
             projAction={project.projAction}
             projResponse={project.projResponse}
+            buttonCap={project.buttonCap}
           />
         </Grid>
       ))}
