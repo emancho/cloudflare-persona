@@ -8,6 +8,7 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import ProjectsPage from './Pages/ProjectsPage';
 import RadioPage from './Pages/RadioPage';
+import CrochetPage from './Pages/CrochetCornerPage';
 import NotFoundPage from './Pages/NotFoundPage';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/radio" element={<RadioPage />} />
+          <Route path="/crochet" element={<CrochetPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
