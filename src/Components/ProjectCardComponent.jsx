@@ -51,7 +51,7 @@ function ProjectCardComponent({
     }));
 
     const displayMessage = showDetails ? projResponse : projDesc;
-    const buttonLabel = projAction !== 'OTHER' ? buttonCap : (showDetails ? 'BACK' : 'MORE');
+    const buttonLabel = projAction !== 'OTHER' ? buttonCap : (showDetails ? 'BACK' : 'NOTES');
 
     return (
         <Card sx={{ minWidth: minWid }}>

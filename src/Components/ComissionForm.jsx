@@ -1,35 +1,84 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import { useState } from 'react';
+import { Box, Button, Alert, Stack, TextField, Typography } from '@mui/material';
+import validator from 'validator';
 
-const crochetTypes = [
-  'Cat Ear Hat',
-  'Shiesty',
-  'Other'
-];
+//=== Description:
+// The Commission Form - This is the form that users can fill out to submit a comission request.
+// Consisits of name, email, note's fields containing comission data from users.
 
 function ComissionForm() {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [hatType, setHatType] = React.useState('');
-  const [notes, setNotes] = React.useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [note, setNote] = useState('');
+  const [showEmailError, setShowEmailError] = useState(false); 
+  const [showNameError, setShowNameError] = useState(false); 
+  const [showSubmissionStatus, setShowSubmissionStatus] = useState(false)
+  const charLength = 300;
 
-  const handleSubmit = (event) => {
+  // Function to validate email format
+  const validateEmail = (email) => {
+    return validator.isEmail(email);
+  };
+
+  // The function that handles how the form data is submitted.
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission logic here
-    console.log({
+    // Object containing commission data
+    const formData = {
       name,
       email,
-      hatType,
-      notes,
-    });
-    alert('Form submitted! Check the console for the data.');
+      note,
+    };
+    // Validate name before proceeding
+    if (!name.trim()) {
+      setShowNameError(true);
+      return;
+    }else{
+      setShowNameError(false);
+    }
+    // Validate email before proceeding
+    if (!validateEmail(email)) {
+      setShowEmailError(true);
+      return;
+    } else {
+      setShowEmailError(false);
+    }
+
+    try {
+      const response = await fetch('functions/api/submit.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSubmissionStatus(true)
+        setTimeout(() => {
+          setShowSubmissionStatus(false);
+        }, 2000);
+        // Clears form after successful submission
+        setName('');
+        setEmail('');
+        setNote('');
+      } else {
+        const errorText = await response.text();
+        console.error('Server error:', response.status, errorText);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+
+  // Handle email input change
+  const handleEmailChange = (e) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+    // Hide the error alert as soon as the user starts typing after an error
+    if (showEmailError && validateEmail(newEmail)) {
+      setShowEmailError(false);
+    }
   };
 
   return (
@@ -49,12 +98,26 @@ function ComissionForm() {
       autoComplete="off"
     >
       <Stack spacing={2}>
+        <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
+          Commission Form
+        </Typography>
+         <Typography variant="body1" sx={{ mb: 2 }}>
+          Interested in getting somthing crochet'd? Make a request and I'll get back to you as soon as possible! 
+        </Typography>
+        {/* The Alertbox showing submission success */}
+        {showSubmissionStatus && (
+          <Alert variant="outlined" severity="success">
+              {`Request Sent!!`}
+          </Alert>
+        )}
         <TextField
           required
           id="name"
-          label="Full Name"
+          label="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          error={showNameError}
+          helperText={showNameError ? 'Please enter your name.' : ''}
         />
         <TextField
           required
@@ -62,31 +125,23 @@ function ComissionForm() {
           label="Email Address"
           type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmailChange} // Use the new handler
+          error={showEmailError} // Apply error styling
+          helperText={showEmailError ? 'Please enter a valid email address.' : ''} // Display helper text
         />
-        <FormControl fullWidth>
-          <InputLabel id="hat-type-select-label">Hat Type</InputLabel>
-          <Select
-            labelId="hat-type-select-label"
-            id="hat-type-select"
-            value={hatType}
-            label="Hat Type"
-            onChange={(e) => setHatType(e.target.value)}
-          >
-            {crochetTypes.map((type) => (
-              <MenuItem key={type} value={type}>
-                {type}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
         <TextField
-          id="notes"
-          label="Additional Notes"
+          id="note"
+          label="What would you like commissioned? (300 characters max)"
           multiline
           rows={4}
-          value={notes}
-          onChange={(e) => setNotes(e.target.value)}
+          value={note}
+          slotProps={{
+            htmlInput: {
+              maxLength: charLength,
+            },
+          }}
+          onChange={(e) => setNote(e.target.value)}
+          helperText={`${note.length}/${charLength}`}
         />
         <Button type="submit" variant="contained" sx={{ mt: 2 }}>
           Submit

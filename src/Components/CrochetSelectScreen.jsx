@@ -30,9 +30,6 @@ const CrochetSelectScreen = () => {
         setShowAltImage(isAlt);
     };
 
-    //=== The caption for the page
-    //const pageCaption = `Check out the things I've Crochet with Human Hands, No AI involved...`
-
     // Styled CardMedia component for custom height/width
     const StyledCardMedia = styled(CardMedia)({
         height: 150,
@@ -60,22 +57,6 @@ const CrochetSelectScreen = () => {
         }}>
             <Stack direction="column" spacing={4}>
             {/* The Textbox Section */}
-                {/* <Box
-                    sx={{
-                        border: `1px solid ${theme.palette.divider}`,
-                        borderRadius: theme.shape.borderRadius,
-                        p: 2.8,
-                        backgroundColor: theme.palette.background.paper,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                    }}>
-                    <Typography variant="body1" color="text.primary">
-                        {pageCaption}
-                    </Typography>
-                </Box> */}
-
                 {/* The Section displaying the selected crochet item */}
                 <ImageDisplaySection
                     selectedImage={selectedImage}
