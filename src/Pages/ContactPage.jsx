@@ -1,5 +1,4 @@
 //=== React Lib
-import React from 'react';
 import _ from 'lodash';
 //== Components
 import AnimatedText from '../Components/AnimatedText';
