@@ -97,10 +97,19 @@ export const RADIO_EP_INFO = [
       thumbnail: R2_DOMAIN + 'radio_ep10.png',
       alt:"The radio host holds a pineapple drink while having shades and a flame head. The setting is a beach with speakers in the water, sea animals and a mermaid. This is the cover of the 10th episode"
     },
+    {
+      id: 11,
+      title:'Episode 11:',
+      src: R2_DOMAIN + 'RadioEp11.mp3',
+      epTitle: "Head in Za Clouds",
+      thumbnail: R2_DOMAIN + 'radio_ep11.png',
+      alt:"A Figure with green glasses and a flaming beard reaches their hand out for some Bud (Blue Dream exactly). The border is purple with white clouds and the episode number (11) is formed by two pre-rolls. This is the cover of the 11th episode"
+    },
   ];
 
 
 // Radio Show Song List Per Episode
+// Note: The unit for the timestamps are in seconds so simply convert 'mins:secs' into 'seconds'
 export const RADIO_EP_TRACKLIST = [
     {
         // For Episode 1
@@ -242,138 +251,150 @@ export const RADIO_EP_TRACKLIST = [
         { id: 'ep_10_song_intro', songTitle: 'Body Language - Intro', artistCredit: 'Kali Uchis', timestamp: 0},
         { id: 'ep_10_song_1', songTitle: 'Count Contessa', artistCredit: 'Azealia Banks, Lone', timestamp: 26},
         { id: 'ep_10_song_2', songTitle: 'Do 2 Me', artistCredit: 'KAYTRANADA ft.Anderson .Paak & SiR', timestamp: 334},
-        { id: 'ep_10_song_3', songTitle: 'U Say', artistCredit: 'Goldlink ft. Tyler,The Creator & Jay Princr', timestamp: 587},
+        { id: 'ep_10_song_3', songTitle: 'U Say', artistCredit: 'Goldlink ft. Tyler,The Creator & Jay Prince', timestamp: 587},
         { id: 'ep_10_song_4', songTitle: 'Closer to Me -edit', artistCredit: 'Kokoroko', timestamp: 805},
         { id: 'ep_10_song_5', songTitle: 'Pop Thieves (Make It Feel Good)', artistCredit: 'Childish Gambino ft Jaden Smith', timestamp: 1036},
         { id: 'ep_10_song_outro', songTitle: 'Dontcha', artistCredit: 'The Internet', timestamp: 1253},
         { id: 'ep_10_song_6', songTitle: 'All Night', artistCredit: 'Chance The Rapper ft Knox Fortune', timestamp: 1297}
     ]
+  }, 
+  {
+    // Episode 11
+    id: 11,
+    radioTrackList: [
+        { id: 'ep_11_song_1', songTitle: 'I Luv I Jah', artistCredit: 'Bad Brains', timestamp: 25},
+        { id: 'ep_11_song_2', songTitle: 'Tryna Smoke', artistCredit: 'Jhene Aiko, Micahfonecheck', timestamp: 415},
+        { id: 'ep_11_song_3', songTitle: 'Mary Jane', artistCredit: 'Rick James', timestamp: 701},
+        { id: 'ep_11_song_4', songTitle: 'Smoke Break (feat. Future)', artistCredit: 'Chance The Rapper, Future', timestamp: 1015},
+        { id: 'ep_11_song_5', songTitle: 'I Wanna Smoke', artistCredit: 'Gangsta Pat, Psycho', timestamp: 1259},
+        { id: 'ep_11_song_6', songTitle: 'Kush Coma', artistCredit: 'Danny Brown, A$AP Rocky & Zelooperz', timestamp: 1604}
+    ]
   },
 ];
 
 // Crochet EXAMPLES
-export const CROCHET_SAMPLES = [
-    {
-        id: 1,
-        src: R2_DOMAIN + 'patterns/Pattern%201.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '1 ~ Type: / Color:/',
-        backgroundColor: '#6EA6CD'
-    },
-    {
-        id: 2,
-        src: R2_DOMAIN + 'patterns/Pattern%202.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '2 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    },
-    {
-        id: 3,
-        src: R2_DOMAIN + 'patterns/Pattern%203.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '3 ~ Type: / Color:/',
-        backgroundColor: '#6EA6CD'
-    },
-    {
-        id: 4,
-        src: R2_DOMAIN + 'patterns/Pattern%204.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '4  ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 5,
-        src: R2_DOMAIN + 'patterns/Pattern%205.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '5 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 6,
-        src: R2_DOMAIN + 'patterns/Pattern%206.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '6 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 7,
-        src: R2_DOMAIN + 'patterns/Pattern%207.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '7 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 8,
-        src: R2_DOMAIN + 'patterns/Pattern%208.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '8 ~ Type: / Color:/',
-        backgroundColor: '#A50026'
-    },
-    {
-        id: 9,
-        src: R2_DOMAIN + 'patterns/Pattern%209.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '9 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    },
-    {
-        id: 10,
-        src: R2_DOMAIN + 'patterns/Pattern%2010.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '10 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 11,
-        src: R2_DOMAIN + 'patterns/Pattern%2011.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '11 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 12,
-        src: R2_DOMAIN + 'patterns/Pattern%2012.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '12 ~ Type: / Color:/ ',
-        backgroundColor: '#6EA6CD'
-    },
-    {
-        id: 13,
-        src: R2_DOMAIN + 'patterns/Pattern%2013.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '13 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 14,
-        src: R2_DOMAIN + 'patterns/Pattern%2014.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: ' 14 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    },
-    {
-        id: 15,
-        src: R2_DOMAIN + 'patterns/Pattern%2015.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '15 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    }
-]
+// export const CROCHET_SAMPLES = [
+//     {
+//         id: 1,
+//         src: R2_DOMAIN + 'patterns/Pattern%201.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '1 ~ Type: / Color:/',
+//         backgroundColor: '#6EA6CD'
+//     },
+//     {
+//         id: 2,
+//         src: R2_DOMAIN + 'patterns/Pattern%202.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '2 ~ Type: / Color:/',
+//         backgroundColor: '#FEDA8B'
+//     },
+//     {
+//         id: 3,
+//         src: R2_DOMAIN + 'patterns/Pattern%203.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '3 ~ Type: / Color:/',
+//         backgroundColor: '#6EA6CD'
+//     },
+//     {
+//         id: 4,
+//         src: R2_DOMAIN + 'patterns/Pattern%204.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '4  ~ Type: / Color:/',
+//         backgroundColor: '#EAECCC'
+//     },
+//     {
+//         id: 5,
+//         src: R2_DOMAIN + 'patterns/Pattern%205.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '5 ~ Type: / Color:/',
+//         backgroundColor: '#C2E4EF'
+//     },
+//     {
+//         id: 6,
+//         src: R2_DOMAIN + 'patterns/Pattern%206.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '6 ~ Type: / Color:/',
+//         backgroundColor: '#EAECCC'
+//     },
+//     {
+//         id: 7,
+//         src: R2_DOMAIN + 'patterns/Pattern%207.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '7 ~ Type: / Color:/',
+//         backgroundColor: '#EAECCC'
+//     },
+//     {
+//         id: 8,
+//         src: R2_DOMAIN + 'patterns/Pattern%208.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '8 ~ Type: / Color:/',
+//         backgroundColor: '#A50026'
+//     },
+//     {
+//         id: 9,
+//         src: R2_DOMAIN + 'patterns/Pattern%209.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '9 ~ Type: / Color:/',
+//         backgroundColor: '#FEDA8B'
+//     },
+//     {
+//         id: 10,
+//         src: R2_DOMAIN + 'patterns/Pattern%2010.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '10 ~ Type: / Color:/',
+//         backgroundColor: '#C2E4EF'
+//     },
+//     {
+//         id: 11,
+//         src: R2_DOMAIN + 'patterns/Pattern%2011.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '11 ~ Type: / Color:/',
+//         backgroundColor: '#EAECCC'
+//     },
+//     {
+//         id: 12,
+//         src: R2_DOMAIN + 'patterns/Pattern%2012.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '12 ~ Type: / Color:/ ',
+//         backgroundColor: '#6EA6CD'
+//     },
+//     {
+//         id: 13,
+//         src: R2_DOMAIN + 'patterns/Pattern%2013.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '13 ~ Type: / Color:/',
+//         backgroundColor: '#C2E4EF'
+//     },
+//     {
+//         id: 14,
+//         src: R2_DOMAIN + 'patterns/Pattern%2014.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: ' 14 ~ Type: / Color:/',
+//         backgroundColor: '#FEDA8B'
+//     },
+//     {
+//         id: 15,
+//         src: R2_DOMAIN + 'patterns/Pattern%2015.png',
+//         srcAlt: testImg,
+//         alt: 'A crochet',
+//         description: '15 ~ Type: / Color:/',
+//         backgroundColor: '#FEDA8B'
+//     }
+// ]
 
 // The list of Social Vinyl
 export const VINYL_LIST = [
@@ -405,15 +426,14 @@ export const VINYL_LIST = [
 
 // The banner text for the HomePage
 export const bannerTexts = [
-  'The Tenth Episode of EddPerience Radio is out NOW!!!',
+  'The Eleventh Episode of EddPerience Radio is out NOW!!!',
   'Turning My Thoughts Into Reality',
   "A Creative Mind Is Useless Under Capitalism When It Doesn't Make Money",
   'Did You Drink Water Yet?',
   'Do Something For Yourself Today',
   'Music Making - In Progress',
-  'Tech Bro Dracula - In Progress',
+  'Tech Bro Dracula - Rough Draft Script now available',
   'Have You Signed Up for the Newsletter?',
   "Don't Be Selfish With Your Art. SHARE IT!!!",
   "Believe In The Me That Believes In You"
 ];
-

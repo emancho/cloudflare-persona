@@ -19,7 +19,7 @@ export const listOfProjects = [
         id:1,
         img:  `${radioShow}`,
         projTitle:'EDDPerience Radio',
-        projDesc: 'Tune in to your friendly neighborhood radio host, DJ Eddperience. An Episodic series filled with music, radio hosting and Dj sessions. For music lovers and music lovers only!!',
+        projDesc: 'Tune in to your friendly neighborhood radio host, DJ Eddperience. An Episodic series filled with music, radio hosting and mashups. This is for music lovers and music lovers only!!',
         projAction:'REDIRECT',
         projResponse: '/radio',
         buttonCap: 'LISTEN HERE' 
@@ -28,7 +28,7 @@ export const listOfProjects = [
         id:2,
         img: `${techBro}`,
         projTitle:'Tech Bro Dracula',
-        projDesc: `This project is a tv seres I'm working on using Dracula's public domain. The premise is that Dracula is struggling to survive in the modern-day world filled with technology and apps; how does Dracula suck blood while staying incognito and dying from starvation. Dracula embraces the very thing he hates...technology, and transforms into a Tech Bro to satisfy his hunger. Rough draft of the pilot is out now!`,
+        projDesc: `This project is a tv seres I'm working on using Dracula's public domain. The premise is that Dracula is struggling to survive in a world filled with technology that prevents him from sucking blood without suspension. To avoid dying from starvation, Dracula embraces the very thing he hates and transforms into a Tech Bro to satisfy his hunger. Rough draft of the pilot is out now!`,
         projAction:'POPUP',
         projResponse:`${R2_DOMAIN}TBD_pilot.pdf`,
         buttonCap: 'SCRIPT HERE'
