@@ -105,6 +105,14 @@ export const RADIO_EP_INFO = [
       thumbnail: R2_DOMAIN + 'radio_ep11.png',
       alt:"A Figure with green glasses and a flaming beard reaches their hand out for some Bud (Blue Dream exactly). The border is purple with white clouds and the episode number (11) is formed by two pre-rolls. This is the cover of the 11th episode"
     },
+    {
+      id: 12,
+      title:'Episode 12:',
+      src: R2_DOMAIN + 'RadioEp12.mp3',
+      epTitle: "SPACE SPACE ADVENTURE",
+      thumbnail: R2_DOMAIN + 'radio_ep12.png',
+      alt:"A Gaint galactic figure is holding a black hole that is consuming DJ Eddperience, with DJ's hand poking out from the Black Hole. This is the cover of the 12th episode"
+    }
   ];
 
 
@@ -270,6 +278,30 @@ export const RADIO_EP_TRACKLIST = [
         { id: 'ep_11_song_6', songTitle: 'Kush Coma', artistCredit: 'Danny Brown, A$AP Rocky & Zelooperz', timestamp: 1604}
     ]
   },
+  {
+  // Episode 12
+  id: 12,
+  radioTrackList: [
+      { id: 'ep_12_song_1', songTitle: 'Super Stars', artistCredit: 'Yves Tumor', },
+      { id: 'ep_12_song_2', songTitle: 'Enter Galactic (Love Connection Part I)', artistCredit: 'Kid Cudi'},
+      { id: 'ep_12_song_3', songTitle: 'Shooting Star', artistCredit: 'Kelis'},
+      { id: 'ep_12_song_4', songTitle: 'Jupiter', artistCredit: 'Kelela'},
+      { id: 'ep_12_song_5', songTitle: 'Space Trip Steps ...for Meteor Herd', artistCredit: 'SEGA, Tomoya Ohtani'},
+      { id: 'ep_12_song_6', songTitle: 'SPACE INVADER', artistCredit: 'KAYTRANDA'},
+      { id: 'ep_12_song_7', songTitle: 'Come Back to Earth', artistCredit: 'Mac Miller'},
+      { id: 'ep_12_song_8', songTitle: '処女航海', artistCredit: 'SHIGEO SEKITO'},
+      { id: 'ep_12_song_9', songTitle: 'Butterfly', artistCredit: 'Herbie Hancock'},
+      { id: 'ep_12_song_10', songTitle: 'Space Road', artistCredit: 'CASIOPEA'},
+      { id: 'ep_12_song_11', songTitle: 'Pretty Women', artistCredit: 'Sweeney Todd: The Demon Barber of Fleet Street'},
+      { id: 'ep_12_song_12', songTitle: 'Time Passed Autumn - Pt. III', artistCredit: 'Claus Ogerman Orchestra'},
+      { id: 'ep_12_song_13', songTitle: 'You\'re Never Too Far from Me', artistCredit: 'George Benson'},
+      { id: 'ep_12_song_14', songTitle: 'High John', artistCredit: 'MF DOOM'},
+      { id: 'ep_12_song_15', songTitle: 'Spot Holes 2', artistCredit: 'Daniel Pemberton'},
+      { id: 'ep_12_song_16', songTitle: 'Prelude', artistCredit: 'Lamont Dozier'},
+      { id: 'ep_12_song_17', songTitle: 'Personal Contact', artistCredit: 'Michel Colombier'},
+      { id: 'ep_12_song_18', songTitle: 'Spinning, Spinning, Spinning, Spiii!?', artistCredit: 'Mawatte Mawatte Mawatte Mawaa'},
+  ]
+},
 ];
 
 // Crochet EXAMPLES
@@ -426,7 +458,7 @@ export const VINYL_LIST = [
 
 // The banner text for the HomePage
 export const bannerTexts = [
-  'The Eleventh Episode of EddPerience Radio is out NOW!!!',
+  'The Twelfth Episode of EddPerience Radio is out NOW!!! And it\'s a special one.',
   'Turning My Thoughts Into Reality',
   "A Creative Mind Is Useless Under Capitalism When It Doesn't Make Money",
   'Did You Drink Water Yet?',
