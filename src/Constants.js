@@ -288,7 +288,18 @@ export const RADIO_EP_TRACKLIST = [
       { id: 'ep_12_song_4', songTitle: 'Jupiter', artistCredit: 'Kelela'},
       { id: 'ep_12_song_5', songTitle: 'Space Trip Steps ...for Meteor Herd', artistCredit: 'SEGA, Tomoya Ohtani'},
       { id: 'ep_12_song_6', songTitle: 'SPACE INVADER', artistCredit: 'KAYTRANDA'},
-      { id: 'ep_12_song_7', songTitle: 'Come Back to Earth', artistCredit: 'Mac Miller'}
+      { id: 'ep_12_song_7', songTitle: 'Come Back to Earth', artistCredit: 'Mac Miller'},
+      { id: 'ep_12_song_8', songTitle: '処女航海', artistCredit: 'SHIGEO SEKITO'},
+      { id: 'ep_12_song_9', songTitle: 'Butterfly', artistCredit: 'Herbie Hancock'},
+      { id: 'ep_12_song_10', songTitle: 'Space Road', artistCredit: 'CASIOPEA'},
+      { id: 'ep_12_song_11', songTitle: 'Pretty Women', artistCredit: 'Sweeney Todd: The Demon Barber of Fleet Street'},
+      { id: 'ep_12_song_12', songTitle: 'Time Passed Autumn - Pt. III', artistCredit: 'Claus Ogerman Orchestra'},
+      { id: 'ep_12_song_13', songTitle: 'You\'re Never Too Far from Me', artistCredit: 'George Benson'},
+      { id: 'ep_12_song_14', songTitle: 'High John', artistCredit: 'MF DOOM'},
+      { id: 'ep_12_song_15', songTitle: 'Spot Holes 2', artistCredit: 'Daniel Pemberton'},
+      { id: 'ep_12_song_16', songTitle: 'Prelude', artistCredit: 'Lamont Dozier'},
+      { id: 'ep_12_song_17', songTitle: 'Personal Contact', artistCredit: 'Michel Colombier'},
+      { id: 'ep_12_song_18', songTitle: 'Spinning, Spinning, Spinning, Spiii!?', artistCredit: 'Mawatte Mawatte Mawatte Mawaa'},
   ]
 },
 ];
