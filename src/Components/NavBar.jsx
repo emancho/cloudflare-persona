@@ -1,5 +1,4 @@
 //== React Libs
-import React from 'react';
 import { Link } from 'react-router-dom';
 //== CSS
 import '../App.css';
@@ -18,6 +17,7 @@ function NavBar() {
         <li><Link to="/contact" className="nav-item">Contact Me</Link></li>
         <li><Link to="/projects" className="nav-item">Projects</Link></li>
         <li><Link to="/radio" className="nav-item">Radio</Link></li>
+        <li><Link to="/bside" className="nav-item">B-Side</Link></li>
       </ul>
     </nav>
   );
