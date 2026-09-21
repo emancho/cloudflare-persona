@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, styled } from '@mui/material';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+//import SkipNextIcon from '@mui/icons-material/SkipNext';
 import ForwardIcon from '@mui/icons-material/Forward';
 
 /**
