@@ -5,6 +5,7 @@
 //=== Components
 import AnimatedText from '../Components/AnimatedText';
 import MainContentComponent from '../Components/MainContentComponent';
+import RetroTV from '../Components/TVCompontent';
 import WebpageTemplate from "../Components/WebpageTemplate";
 //== Assets
 
@@ -22,7 +23,7 @@ function BsidePage(){
                 <AnimatedText 
                 title={'B Side'}/>
             }
-            topSection={(<p>TOP</p>)}
+            topSection={<RetroTV/>}
             topStyle={null}
             bottomSection={(<p>BOTTOM</p>)}  
             bottomStyle={null}
