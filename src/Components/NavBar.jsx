@@ -17,7 +17,7 @@ function NavBar() {
         <li><Link to="/contact" className="nav-item">Contact Me</Link></li>
         <li><Link to="/projects" className="nav-item">Projects</Link></li>
         <li><Link to="/radio" className="nav-item">Radio</Link></li>
-        <li><Link to="/bside" className="nav-item">B-Side</Link></li>
+        <li><Link to="/bumps" className="nav-item">Bumps</Link></li>
       </ul>
     </nav>
   );

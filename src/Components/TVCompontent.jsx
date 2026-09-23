@@ -23,6 +23,8 @@ import ForwardIcon from '@mui/icons-material/Forward';
  *  - width: cabinet width in px (default 420)
  */
 
+
+/*== Cabinet : The outer shell of the TV. ==*/
 const Cabinet = styled(Box)(({ theme, $width }) => ({
   position: 'relative',
   width: $width,
@@ -56,12 +58,15 @@ const Cabinet = styled(Box)(({ theme, $width }) => ({
   '&::after': { right: 26 },
 }));
 
+/*== Row — flex container placing the screen and control column side by side. ==*/
 const Row = styled(Box)({
   display: 'flex',
   gap: 18,
   alignItems: 'stretch',
 });
 
+
+/*== ScreenBezel — the frame around the picture screen. ==*/
 const ScreenBezel = styled(Box)({
   flex: '1 1 auto',
   borderRadius: '48% / 38%',
@@ -75,6 +80,7 @@ const ScreenBezel = styled(Box)({
   border: '1px solid #8a7c5c',
 });
 
+/*== Screen — the glass picture area where the picture is rendered. ==*/
 const Screen = styled(Box)(({ $on }) => ({
   position: 'relative',
   height: 230,
@@ -106,6 +112,8 @@ const Screen = styled(Box)(({ $on }) => ({
   },
 }));
 
+
+/*== TestPattern — default content shown when no children are passed ==*/
 const TestPattern = () => (
   <Box sx={{ display: 'flex', width: '100%', height: '100%' }}>
     {['#c9c9c9', '#c9b400', '#00b4c9', '#00c95a', '#c9006e', '#c92200', '#0022c9'].map((c) => (
@@ -114,6 +122,7 @@ const TestPattern = () => (
   </Box>
 );
 
+/*== Controls — the right-hand column of buttons and dials. ==*/
 const Controls = styled(Box)({
   flex: '0 0 84px',
   display: 'flex',
@@ -123,6 +132,7 @@ const Controls = styled(Box)({
   padding: '4px 0',
 });
 
+/*== Grille — the speaker grille section ==*/
 const Grille = styled(Box)({
   flex: 1,
   width: '100%',
@@ -132,7 +142,7 @@ const Grille = styled(Box)({
   boxShadow: '0 0 0 1px #2a180d inset',
 });
 
-// PowerButton replaces the rotary Knob — flat face, power icon, color-coded glow
+/*== PowerButton — round on/off button ==*/
 const PowerButton = styled(Box)(({ $active }) => ({
   width: 34,
   height: 34,
@@ -190,7 +200,7 @@ const PowerIcon = () => (
   />
 );
 
-// Dial is now interactive — click advances to the next channel, wrapping within range
+/*== Dail - the channel selection dial/button ==*/ 
 const Dial = styled(Box)({
   marginTop: 10,
   width: 34,
@@ -212,6 +222,7 @@ const Dial = styled(Box)({
   '&:focus-visible': { outline: '2px solid #fff', outlineOffset: 2 },
 });
 
+/*== Nameplate — the text under the screen ==*/
 const Nameplate = styled(Box)({
   marginTop: 16,
   textAlign: 'center',
@@ -222,6 +233,7 @@ const Nameplate = styled(Box)({
   textShadow: '0 1px 0 rgba(0,0,0,0.4)',
 });
 
+/*== RetroTV — main component that assembles the TV and manages its state ==*/
 export default function RetroTV({
   children,
   channel,

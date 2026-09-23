@@ -13,7 +13,7 @@ import WebpageTemplate from "../Components/WebpageTemplate";
 // Homepage - This page is dedicated to the throwaway beats. This page contains the tracks I've created whether 
 // complete or incomplete.
 
-function BsidePage(){
+function BumpsPage(){
 
     return (
         <WebpageTemplate
@@ -21,7 +21,7 @@ function BsidePage(){
             <MainContentComponent
             title={
                 <AnimatedText 
-                title={'B Side'}/>
+                title={'Bump Station'}/>
             }
             topSection={<RetroTV/>}
             topStyle={null}
@@ -33,4 +33,4 @@ function BsidePage(){
   );
 }
 
-export default BsidePage
+export default BumpsPage
