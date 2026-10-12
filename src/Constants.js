@@ -115,7 +115,6 @@ export const RADIO_EP_INFO = [
     }
   ];
 
-
 // Radio Show Song List Per Episode
 // Note: The unit for the timestamps are in seconds so simply convert 'mins:secs' into 'seconds'
 export const RADIO_EP_TRACKLIST = [
@@ -303,6 +302,17 @@ export const RADIO_EP_TRACKLIST = [
   ]
 },
 ];
+
+// Bump Station List
+// Note: The object that constains the data for the songs used in the bump station page.
+export const BUMP_STATION_LIST = [
+    {
+        id: 1,
+        title: 'Title Demo',
+        songSrc: null, 
+        songVisual: null,
+        alt: 'A display of a person with a flame head and shades holding a vinyl with a heart shaped labeling. The background is a pink hued sky with clouds and the words "Bump 1" in the corner.'
+    }]
 
 // Crochet EXAMPLES
 // export const CROCHET_SAMPLES = [

@@ -242,7 +242,7 @@ export default function RetroTV({
   minChannel = 2,
   maxChannel = 13,
   on,
-  defaultOn = true,
+  defaultOn = false,
   onToggle,
   width = 420,
 }) {
@@ -297,8 +297,9 @@ export default function RetroTV({
           </Dial>
         </Controls>
       </Row>
-
-      <Nameplate>SUPREME&nbsp;&nbsp;COLOR&nbsp;&nbsp;VISION</Nameplate>
+        {!isOn ? (
+            <Nameplate>TURN&nbsp;&nbsp;THE&nbsp;&nbsp;TV&nbsp;&nbsp;ON!!</Nameplate>
+        ) : (<Nameplate>BUMP STATION</Nameplate>)}
     </Cabinet>
   );
 }
