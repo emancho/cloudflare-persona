@@ -1,5 +1,3 @@
-//=== React Lib
-import _ from 'lodash';
 //== Components
 import AnimatedText from '../Components/AnimatedText';
 import MainContentComponent from '../Components/MainContentComponent';
@@ -31,7 +29,7 @@ function CrochetPage() {
             bottomSection={<CommissionForm/>}  
             bottomStyle={""}
         />
-    }
+      }
     />
   );  
 }

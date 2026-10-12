@@ -3,6 +3,7 @@ import techBro from './assets/techbro_drac.png';
 import unemployed from './assets/UHN_pilot.png' 
 import girlDdance from './assets/proj1.png';
 import radioShow from './assets/radio_cover.png';
+import crochet from './assets/crochetcover.gif';
 
 // Location of Project Details for Gallery Page
 // img - path of image, 
@@ -26,6 +27,15 @@ export const listOfProjects = [
     },
     {
         id:2,
+        img:  `${crochet}`,
+        projTitle:'Crochet Corner',
+        projDesc: 'My hobby turned into a capitalistic venture. Check out my crochet pieces and if you like what you see, make a custom order request.',
+        projAction:'REDIRECT',
+        projResponse: '/crochet',
+        buttonCap: 'VIEW HERE' 
+    },
+    {
+        id:3,
         img: `${techBro}`,
         projTitle:'Tech Bro Dracula',
         projDesc: `This project is a tv seres I'm working on using Dracula's public domain. The premise is that Dracula is struggling to survive in a world filled with technology that prevents him from sucking blood without suspension. To avoid dying from starvation, Dracula embraces the very thing he hates and transforms into a Tech Bro to satisfy his hunger. Rough draft of the pilot is out now!`,
@@ -34,7 +44,7 @@ export const listOfProjects = [
         buttonCap: 'SCRIPT HERE'
     },
     {
-        id:3,
+        id:4,
         img: `${unemployed}`,
         projTitle:'HoboSexual',
         projDesc: "This project is a short series. Premise: \"Vergil has been with Nyx with two years and lives off her thanks to this \'talents'\. But what happens when Nyx wants Vergil to get a job and Vergil does everything but that. How far does Vergil's talents go to avoid being homeless?\" Rough draft of the pilot is out now",
@@ -43,7 +53,7 @@ export const listOfProjects = [
         buttonCap: 'SCRIPT HERE'
     },
     {
-        id:4,
+        id:5,
         img: `${girlDdance}`,
         projTitle:'The Gals Just Want to Dance',
         projDesc: 'This will be a music project that will consist of tracks produced by me. The project is planned to have 6 or more songs that will be inspired by multiple genres (Funk, Disco, R&B, House, Etc). Album cover is based on a true story.',
