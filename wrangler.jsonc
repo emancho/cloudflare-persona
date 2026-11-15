@@ -13,19 +13,20 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
-	"send_email": [
-		{
-			"name": "eddwothewar@gmail.com",
-			"remote": true
-		}
-	],
 	"d1_databases": [
 		{
 			"binding": "DB",
 			"database_name": "crochet-commission-db",
 			"database_id": "0eaf9e00-7bb3-4229-816a-c831534b7def"
 		}
+	],
+	"services": [
+		{
+			"binding": "EMAIL_WORKER",
+			"service": "commission-email-worker"
+		}
 	]
+  	
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

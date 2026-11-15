@@ -5,7 +5,7 @@ export async function onRequestPost(context) {
   try {
     const { name, email, note } = await request.json();
 
-    // Server-side validation 
+    // Server-side validation
     if (!name?.trim() || !email || !note) {
       return new Response(JSON.stringify({ error: 'Missing required fields' }), {
         status: 400,
@@ -13,32 +13,41 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Send via the Cloudflare Email Sending binding (env.EMAIL)
-    await env.EMAIL.send({
-      to: 'eddwothewar@gmail.com',                       // Verified Email Routing
-      from: 'commission@eddwithoutthewar.com',           // Commission Email Address
-      subject: `New Commission Request from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nNote: ${note}`,
-    });
+    // Forward to the Email Proxy Worker via Service Binding
+    const workerResponse = await env.EMAIL_WORKER.fetch(
+      new Request('https://eddwithoutthewar.com/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, note }),
+      })
+    );
 
-    // Storing email info in database
-    try{
-         await env.DB.prepare(
-            "INSERT INTO commissions (name, email, note) VALUES (?, ?, ?)"
-            ).bind(name, email, note).run();
-    } catch (dbError) {
-    //  console.error('Database error:', dbError);
-        console.error('Database error encountered');
+    if (!workerResponse.ok) {
+      const errorText = await workerResponse.text();
+      console.error('Email worker error:', workerResponse.status, errorText);
+      return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+        status: 502,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
+
+    // Store in database (non-fatal if it fails)
+    try {
+      await env.DB.prepare(
+        "INSERT INTO commissions (name, email, note) VALUES (?, ?, ?)"
+      ).bind(name, email, note).run();
+    } catch (dbError) {
+      console.error('Database insert failed:', dbError.message);
+    }
+
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-
   } catch (error) {
-    console.error('Send email error:', error);
-    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
-      status: 502,
+    console.error('Submit handler error:', error.message);
+    return new Response(JSON.stringify({ error: 'Internal error' }), {
+      status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }

@@ -38,7 +38,7 @@ function ComissionForm() {
     setSubmitting(true);
 
     try {
-      const response = await fetch('functions/api/submit.js', {
+      const response = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -51,16 +51,15 @@ function ComissionForm() {
         setEmail('');
         setNote('');
       } else {
-        // FIX 2: surface server failure to the user
-        const errorText = await response.text();
-        console.error('Server error:', response.status, errorText);
-        setSubmitError('Submission failed. Please try again later.');
+          const errorText = await response.text();
+          console.error('Server error:', response.status, errorText);
+          setSubmitError('Submission failed. Please try again later.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitError('Network error. Please check your connection and try again.'); // FIX 2
+        console.error('Error submitting form:', error);
+        setSubmitError('Network error. Please check your connection and try again.'); 
     } finally {
-      setSubmitting(false);                                   // FIX 1: always release
+        setSubmitting(false);                                   
     }
   };
 
