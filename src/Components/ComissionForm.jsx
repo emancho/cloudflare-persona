@@ -82,7 +82,8 @@ function ComissionForm() {
         maxWidth: '500px',
         margin: 'auto',
         padding: 3,
-        border: '1px solid #ccc',
+        border: '3px solid #c8c3c3',
+        backgroundColor: '#f9f9f9',
         borderRadius: '8px',
       }}
       noValidate

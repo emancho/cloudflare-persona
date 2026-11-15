@@ -87,7 +87,7 @@ const CrochetSelectScreen = () => {
 
                 {/* The Pattern Preview Section */}
                 <Grid sx={{ mt: 4 }}>
-                    <Typography variant="h6" component="h3" gutterBottom>
+                    <Typography variant="h6" component="h3" gutterBottom sx={{ mb: 2 }}>
                         Previous Crochet Pieces:
                     </Typography>
                     <Grid container spacing={3}>
