@@ -2,81 +2,73 @@ import { useState } from 'react';
 import { Box, Button, Alert, Stack, TextField, Typography } from '@mui/material';
 import validator from 'validator';
 
-//=== Description:
-// The Commission Form - This is the form that users can fill out to submit a comission request.
-// Consisits of name, email, note's fields containing comission data from users.
-
 function ComissionForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [note, setNote] = useState('');
-  const [showEmailError, setShowEmailError] = useState(false); 
-  const [showNameError, setShowNameError] = useState(false); 
-  const [showSubmissionStatus, setShowSubmissionStatus] = useState(false)
+  const [showEmailError, setShowEmailError] = useState(false);
+  const [showNameError, setShowNameError] = useState(false);
+  const [showSubmissionStatus, setShowSubmissionStatus] = useState(false);
+  const [submitting, setSubmitting] = useState(false);       
+  const [submitError, setSubmitError] = useState('');        
   const charLength = 300;
 
-  // Function to validate email format
-  const validateEmail = (email) => {
-    return validator.isEmail(email);
-  };
+  const validateEmail = (email) => validator.isEmail(email);
 
-  // The function that handles how the form data is submitted.
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // Object containing commission data
-    const formData = {
-      name,
-      email,
-      note,
-    };
-    // Validate name before proceeding
+    if (submitting) return;                                   
+    setSubmitError('');                                       
+
+    // Validate name
     if (!name.trim()) {
       setShowNameError(true);
       return;
-    }else{
-      setShowNameError(false);
     }
-    // Validate email before proceeding
+    setShowNameError(false);
+
+    // Validate email
     if (!validateEmail(email)) {
       setShowEmailError(true);
       return;
-    } else {
-      setShowEmailError(false);
     }
+    setShowEmailError(false);
+
+    const formData = { name, email, note };
+    setSubmitting(true);
 
     try {
       const response = await fetch('functions/api/submit.js', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setShowSubmissionStatus(true)
-        setTimeout(() => {
-          setShowSubmissionStatus(false);
-        }, 2000);
-        // Clears form after successful submission
+        setShowSubmissionStatus(true);
+        setTimeout(() => setShowSubmissionStatus(false), 2000);
         setName('');
         setEmail('');
         setNote('');
       } else {
+        // FIX 2: surface server failure to the user
         const errorText = await response.text();
         console.error('Server error:', response.status, errorText);
+        setSubmitError('Submission failed. Please try again later.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setSubmitError('Network error. Please check your connection and try again.'); // FIX 2
+    } finally {
+      setSubmitting(false);                                   // FIX 1: always release
     }
   };
 
-  // Handle email input change
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
     setEmail(newEmail);
-    // Hide the error alert as soon as the user starts typing after an error
-    if (showEmailError && validateEmail(newEmail)) {
+    // FIX 3: also clear error when field is emptied
+    if (showEmailError && (newEmail === '' || validateEmail(newEmail))) {
       setShowEmailError(false);
     }
   };
@@ -101,15 +93,23 @@ function ComissionForm() {
         <Typography variant="h4" component="h2" sx={{ mb: 2 }}>
           Commission Form
         </Typography>
-         <Typography variant="body1" sx={{ mb: 2 }}>
-          Interested in getting somthing crochet'd? Make a request and I'll get back to you as soon as possible! 
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          Interested in getting somthing crochet'd? Make a request and I'll get back to you as soon as possible!
         </Typography>
-        {/* The Alertbox showing submission success */}
-        {showSubmissionStatus && (
-          <Alert variant="outlined" severity="success">
-              {`Request Sent!!`}
+
+        {/* FIX 2: user-visible error alert */}
+        {submitError && (
+          <Alert severity="error" onClose={() => setSubmitError('')}>
+            {submitError}
           </Alert>
         )}
+
+        {showSubmissionStatus && (
+          <Alert variant="outlined" severity="success">
+            Request Sent!!
+          </Alert>
+        )}
+
         <TextField
           required
           id="name"
@@ -125,9 +125,9 @@ function ComissionForm() {
           label="Email Address"
           type="email"
           value={email}
-          onChange={handleEmailChange} // Use the new handler
-          error={showEmailError} // Apply error styling
-          helperText={showEmailError ? 'Please enter a valid email address.' : ''} // Display helper text
+          onChange={handleEmailChange}
+          error={showEmailError}
+          helperText={showEmailError ? 'Please enter a valid email address.' : ''}
         />
         <TextField
           id="note"
@@ -135,16 +135,14 @@ function ComissionForm() {
           multiline
           rows={4}
           value={note}
-          slotProps={{
-            htmlInput: {
-              maxLength: charLength,
-            },
-          }}
+          slotProps={{ htmlInput: { maxLength: charLength } }}
           onChange={(e) => setNote(e.target.value)}
           helperText={`${note.length}/${charLength}`}
         />
-        <Button type="submit" variant="contained" sx={{ mt: 2 }}>
-          Submit
+
+        {/* FIX 1: disable + relabel while submitting */}
+        <Button type="submit" variant="contained" disabled={submitting} sx={{ mt: 2 }}>
+          {submitting ? 'Sending...' : 'Submit'}
         </Button>
       </Stack>
     </Box>
