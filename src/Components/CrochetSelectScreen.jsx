@@ -108,7 +108,7 @@ const CrochetSelectScreen = () => {
                                 <CardActionArea onClick={() => handleImageSelect(image)}>
                                     <StyledCardMedia
                                         component="img"
-                                        image={image.src}
+                                        image={image.srcCover}
                                         alt={image.alt}
                                     />
                                     <Box sx={{ p: 1 }}>

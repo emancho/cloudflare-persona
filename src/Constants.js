@@ -306,125 +306,148 @@ export const RADIO_EP_TRACKLIST = [
 // Crochet EXAMPLES
 export const CROCHET_SAMPLES = [
     {
-        id: 1,
-        src: R2_DOMAIN + 'patterns/Pattern%201.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '1 ~ Type: / Color:/',
-        backgroundColor: '#6EA6CD'
+        id: 2,
+        src: R2_DOMAIN + 'patterns/Autumn%20Pumpkin%20A.png',
+        srcAlt: R2_DOMAIN + 'patterns/Autumn%20Pumlpkin%20B.png',
+        srcCover: R2_DOMAIN + 'patterns/Autumn%20Pumlpkin%20C.png',
+        description: 'Crochet Mask',
+        alt: 'Autumn Pumpkin',
+        colors: ['Purple','Lime Green', 'Green', 'Maroon'],
+        backgroundColor: '#FEDA8B'
     },
     {
-        id: 2,
-        src: R2_DOMAIN + 'patterns/Pattern%202.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '2 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
+        id: 1,
+        src: R2_DOMAIN + 'patterns/BnW%20A.png',
+        srcAlt: R2_DOMAIN + 'patterns/BnW%20B.png',
+        srcCover: R2_DOMAIN + 'patterns/BnW%20C.png',
+        description: 'Crochet Mask',
+        alt: 'Cookies N Creme',
+        colors: ['Black','White'],
+        backgroundColor: '#6EA6CD'
     },
     {
         id: 3,
-        src: R2_DOMAIN + 'patterns/Pattern%203.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '3 ~ Type: / Color:/',
+        src: R2_DOMAIN + 'patterns/Acid%20Clouds%20A.png',
+        srcAlt: R2_DOMAIN + 'patterns/Acid%20Clouds%20B.png',
+        srcCover: R2_DOMAIN + 'patterns/Acid%20Clouds%20C.png',
+        description: 'Crochet Mask',
+        alt: 'Acid Clouds',
+        colors: ['Lime Green','Green'],
         backgroundColor: '#6EA6CD'
     },
-    {
-        id: 4,
-        src: R2_DOMAIN + 'patterns/Pattern%204.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '4  ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 5,
-        src: R2_DOMAIN + 'patterns/Pattern%205.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '5 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 6,
-        src: R2_DOMAIN + 'patterns/Pattern%206.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '6 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 7,
-        src: R2_DOMAIN + 'patterns/Pattern%207.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '7 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 8,
-        src: R2_DOMAIN + 'patterns/Pattern%208.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '8 ~ Type: / Color:/',
-        backgroundColor: '#A50026'
-    },
-    {
-        id: 9,
-        src: R2_DOMAIN + 'patterns/Pattern%209.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '9 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    },
-    {
-        id: 10,
-        src: R2_DOMAIN + 'patterns/Pattern%2010.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '10 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 11,
-        src: R2_DOMAIN + 'patterns/Pattern%2011.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '11 ~ Type: / Color:/',
-        backgroundColor: '#EAECCC'
-    },
-    {
-        id: 12,
-        src: R2_DOMAIN + 'patterns/Pattern%2012.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '12 ~ Type: / Color:/ ',
-        backgroundColor: '#6EA6CD'
-    },
-    {
-        id: 13,
-        src: R2_DOMAIN + 'patterns/Pattern%2013.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '13 ~ Type: / Color:/',
-        backgroundColor: '#C2E4EF'
-    },
-    {
-        id: 14,
-        src: R2_DOMAIN + 'patterns/Pattern%2014.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: ' 14 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    },
-    {
-        id: 15,
-        src: R2_DOMAIN + 'patterns/Pattern%2015.png',
-        srcAlt: testImg,
-        alt: 'A crochet',
-        description: '15 ~ Type: / Color:/',
-        backgroundColor: '#FEDA8B'
-    }
+
+    // {
+    //     id: 2,
+    //     src: R2_DOMAIN + 'patterns/Pattern%202.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '2 ~ Type: / Color:/',
+    //     backgroundColor: '#FEDA8B'
+    // },
+    // {
+    //     id: 3,
+    //     src: R2_DOMAIN + 'patterns/Pattern%203.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '3 ~ Type: / Color:/',
+    //     backgroundColor: '#6EA6CD'
+    // },
+    // {
+    //     id: 4,
+    //     src: R2_DOMAIN + 'patterns/Pattern%204.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '4  ~ Type: / Color:/',
+    //     backgroundColor: '#EAECCC'
+    // },
+    // {
+    //     id: 5,
+    //     src: R2_DOMAIN + 'patterns/Pattern%205.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '5 ~ Type: / Color:/',
+    //     backgroundColor: '#C2E4EF'
+    // },
+    // {
+    //     id: 6,
+    //     src: R2_DOMAIN + 'patterns/Pattern%206.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '6 ~ Type: / Color:/',
+    //     backgroundColor: '#EAECCC'
+    // },
+    // {
+    //     id: 7,
+    //     src: R2_DOMAIN + 'patterns/Pattern%207.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '7 ~ Type: / Color:/',
+    //     backgroundColor: '#EAECCC'
+    // },
+    // {
+    //     id: 8,
+    //     src: R2_DOMAIN + 'patterns/Pattern%208.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '8 ~ Type: / Color:/',
+    //     backgroundColor: '#A50026'
+    // },
+    // {
+    //     id: 9,
+    //     src: R2_DOMAIN + 'patterns/Pattern%209.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '9 ~ Type: / Color:/',
+    //     backgroundColor: '#FEDA8B'
+    // },
+    // {
+    //     id: 10,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2010.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '10 ~ Type: / Color:/',
+    //     backgroundColor: '#C2E4EF'
+    // },
+    // {
+    //     id: 11,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2011.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '11 ~ Type: / Color:/',
+    //     backgroundColor: '#EAECCC'
+    // },
+    // {
+    //     id: 12,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2012.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '12 ~ Type: / Color:/ ',
+    //     backgroundColor: '#6EA6CD'
+    // },
+    // {
+    //     id: 13,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2013.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '13 ~ Type: / Color:/',
+    //     backgroundColor: '#C2E4EF'
+    // },
+    // {
+    //     id: 14,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2014.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: ' 14 ~ Type: / Color:/',
+    //     backgroundColor: '#FEDA8B'
+    // },
+    // {
+    //     id: 15,
+    //     src: R2_DOMAIN + 'patterns/Pattern%2015.png',
+    //     srcAlt: testImg,
+    //     alt: 'A crochet',
+    //     description: '15 ~ Type: / Color:/',
+    //     backgroundColor: '#FEDA8B'
+    // }
  ]
 
 // The list of Social Vinyl
