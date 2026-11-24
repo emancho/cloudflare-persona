@@ -40,7 +40,7 @@ export const listOfProjects = [
         projTitle:'Tech Bro Dracula',
         projDesc: `This project is a tv seres I'm working on using Dracula's public domain. The premise is that Dracula is struggling to survive in a world filled with technology that prevents him from sucking blood without suspension. To avoid dying from starvation, Dracula embraces the very thing he hates and transforms into a Tech Bro to satisfy his hunger. Rough draft of the pilot is out now!`,
         projAction:'POPUP',
-        projResponse:`${R2_DOMAIN}TBD_pilot.pdf`,
+        projResponse:`${R2_DOMAIN}Tech_Bro_Dracula-post.pdf`,
         buttonCap: 'SCRIPT HERE'
     },
     {
@@ -49,7 +49,7 @@ export const listOfProjects = [
         projTitle:'HoboSexual',
         projDesc: "This project is a short series. Premise: \"Vergil has been with Nyx with two years and lives off her thanks to this \'talents'\. But what happens when Nyx wants Vergil to get a job and Vergil does everything but that. How far does Vergil's talents go to avoid being homeless?\" Rough draft of the pilot is out now",
         projAction:'POPUP',
-        projResponse:`${R2_DOMAIN}UHN_pilot.pdf`,
+        projResponse:`${R2_DOMAIN}HoboSexual_Pilot-post.pdf`,
         buttonCap: 'SCRIPT HERE'
     },
     {

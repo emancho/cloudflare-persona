@@ -335,6 +335,16 @@ export const CROCHET_SAMPLES = [
         colors: ['Lime Green','Green'],
         backgroundColor: '#6EA6CD'
     },
+    {
+        id: 4,
+        src: R2_DOMAIN + 'patterns/Acid%20Clouds%20A.png',
+        srcAlt: R2_DOMAIN + 'patterns/Acid%20Clouds%20B.png',
+        srcCover: R2_DOMAIN + 'patterns/Acid%20Clouds%20C.png',
+        description: 'Crochet Mask',
+        alt: 'Acid Clouds',
+        colors: ['Lime Green','Green'],
+        backgroundColor: '#6EA6CD'
+    },
 
     // {
     //     id: 2,
